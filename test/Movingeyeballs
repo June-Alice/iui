@@ -1,0 +1,184 @@
+<html><head><style>.eyeball-physics {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.eyeball-sprites {
+  pointer-events: none;
+}
+
+.eyeball {
+  background: #FFFFFF;
+  border-radius: 100%;
+/*   box-shadow: inset 0px 0px 30px rgba(0,0,0,1.2); */
+  overflow: hidden;
+  position: fixed;
+}
+.eyeball > div {
+  background: url(//www.jq22.com/tp/6367904935130389397864991.png);
+  background-size: contain;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.eyeball::after {
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0, rgba(0,0,0,0) 30%,rgba(0,0,0,2.5) 100%);
+  border-radius: 100%;
+  box-shadow: inset -10px -10px 15px rgba(0,0,0,0.9);
+  content: '';
+  display: block;
+  height: 140%;
+  left: -30%;
+  position: absolute;
+  top: -30%;
+  width: 140%;
+  z-index: 2;
+}
+.eyeball--1 > div {
+  filter: hue-rotate(45deg);
+}
+.eyeball--2 > div {
+  filter: hue-rotate(90deg);
+}
+.eyeball--3 > div {
+  filter: hue-rotate(195deg);
+}
+.eyeball--4 > div {
+  filter: hue-rotate(255deg);
+}</style><script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script><script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.js"></script>
+</head><body style=""><div class="eyeball-physics"><canvas width="1047" height="246" style="background:  0% 0% / contain rgb(0, 0, 0);"></canvas></div>
+<div class="eyeball-sprites"><div class="eyeball eyeball--0" style="width: 151.058px; height: 151.058px; transform: translate(733.764px, 87.6154px);"><div style="transform: translate(-37.7376px, 1.42297px);"></div></div><div class="eyeball eyeball--0" style="width: 217.803px; height: 217.803px; transform: translate(296.008px, 26033.2px);"><div style="transform: translate(-0.846207px, -54.4441px);"></div></div><div class="eyeball eyeball--0" style="width: 40.4952px; height: 40.4952px; transform: translate(446.059px, 26005.4px);"><div style="transform: translate(-0.182093px, -10.1222px);"></div></div><div class="eyeball eyeball--3" style="width: 171.114px; height: 171.114px; transform: translate(9.25129px, 26091.2px);"><div style="transform: translate(-0.153456px, -42.7782px);"></div></div><div class="eyeball eyeball--3" style="width: 154.579px; height: 154.579px; transform: translate(884.561px, 84.2584px);"><div style="transform: translate(-38.6231px, 1.28921px);"></div></div><div class="eyeball eyeball--3" style="width: 55.5036px; height: 55.5036px; transform: translate(-76.4924px, 26203.5px);"><div style="transform: translate(0.0268273px, -13.8759px);"></div></div><div class="eyeball eyeball--3" style="width: 39.2882px; height: 39.2882px; transform: translate(983.009px, 25891.5px);"><div style="transform: translate(-0.382034px, -9.81462px);"></div></div><div class="eyeball eyeball--3" style="width: 86.087px; height: 86.087px; transform: translate(186.908px, 74.2573px);"><div style="transform: translate(-20.4124px, 6.82041px);"></div></div><div class="eyeball eyeball--2" style="width: 80.9494px; height: 80.9494px; transform: translate(208.043px, 157.523px);"><div style="transform: translate(-20.2342px, -0.360366px);"></div></div><div class="eyeball eyeball--0" style="width: 80.3899px; height: 80.3899px; transform: translate(512.302px, 26164px);"><div style="transform: translate(-0.425564px, -20.093px);"></div></div><div class="eyeball eyeball--0" style="width: 64.0649px; height: 64.0649px; transform: translate(774.179px, 26267px);"><div style="transform: translate(-0.493411px, -16.0086px);"></div></div><div class="eyeball eyeball--1" style="width: 81.2113px; height: 81.2113px; transform: translate(141.446px, 26533.7px);"><div style="transform: translate(-0.138874px, -20.3024px);"></div></div><div class="eyeball eyeball--0" style="width: 23.5714px; height: 23.5714px; transform: translate(622.157px, 26242px);"><div style="transform: translate(-0.142946px, -5.89111px);"></div></div><div class="eyeball eyeball--4" style="width: 168.687px; height: 168.687px; transform: translate(685.601px, 26053px);"><div style="transform: translate(-1.2484px, -42.1533px);"></div></div><div class="eyeball eyeball--4" style="width: 75.1436px; height: 75.1436px; transform: translate(-8.20316px, 162.924px);"><div style="transform: translate(-18.2321px, -4.52777px);"></div></div><div class="eyeball eyeball--2" style="width: 128.441px; height: 128.441px; transform: translate(1290.68px, 26331.1px);"><div style="transform: translate(-1.65626px, -32.0674px);"></div></div><div class="eyeball eyeball--2" style="width: 103.275px; height: 103.275px; transform: translate(508.311px, 26252.4px);"><div style="transform: translate(-0.551984px, -25.8128px);"></div></div><div class="eyeball eyeball--0" style="width: 210.915px; height: 210.915px; transform: translate(-626.524px, 26250.4px);"><div style="transform: translate(1.0532px, -52.7183px);"></div></div><div class="eyeball eyeball--3" style="width: 180.707px; height: 180.707px; transform: translate(176.201px, 26239.4px);"><div style="transform: translate(-0.457955px, -45.1745px);"></div></div><div class="eyeball eyeball--0" style="width: 25.6828px; height: 25.6828px; transform: translate(657.428px, 26171.1px);"><div style="transform: translate(-0.165135px, -6.41859px);"></div></div><div class="eyeball eyeball--3" style="width: 179.893px; height: 179.893px; transform: translate(663.541px, -167.47px);"><div style="transform: translate(-42.3069px, 15.2554px);"></div></div><div class="eyeball eyeball--1" style="width: 124.898px; height: 124.898px; transform: translate(-201.654px, 26334.6px);"><div style="transform: translate(0.167783px, -31.224px);"></div></div><div class="eyeball eyeball--3" style="width: 88.3456px; height: 88.3456px; transform: translate(-1613.43px, 26371px);"><div style="transform: translate(1.32077px, -22.0469px);"></div></div><div class="eyeball eyeball--3" style="width: 48.7684px; height: 48.7684px; transform: translate(811.013px, 26327.9px);"><div style="transform: translate(-0.388421px, -12.1859px);"></div></div><div class="eyeball eyeball--0" style="width: 114.702px; height: 114.702px; transform: translate(812.436px, 26179.6px);"><div style="transform: translate(-0.955401px, -28.6596px);"></div></div><div class="eyeball eyeball--1" style="width: 138.276px; height: 138.276px; transform: translate(-49.8539px, 26256.4px);"><div style="transform: translate(-0.0233937px, -34.569px);"></div></div><div class="eyeball eyeball--2" style="width: 112.778px; height: 112.778px; transform: translate(-5.88926px, 25981.3px);"><div style="transform: translate(-0.0533473px, -28.1945px);"></div></div><div class="eyeball eyeball--0" style="width: 53.2113px; height: 53.2113px; transform: translate(386.214px, 26594px);"><div style="transform: translate(-0.206975px, -13.3012px);"></div></div><div class="eyeball eyeball--1" style="width: 156.29px; height: 156.29px; transform: translate(804.195px, -49.0486px);"><div style="transform: translate(-38.4082px, 7.17385px);"></div></div><div class="eyeball eyeball--0" style="width: 187.374px; height: 187.374px; transform: translate(-8.20848px, -46.5804px);"><div style="transform: translate(-23.2761px, 40.6515px);"></div></div><div class="eyeball eyeball--0" style="width: 133.224px; height: 133.224px; transform: translate(288.162px, 31.4488px);"><div style="transform: translate(-32.1505px, 8.6972px);"></div></div><div class="eyeball eyeball--1" style="width: 179.363px; height: 179.363px; transform: translate(873.12px, 26263px);"><div style="transform: translate(-1.64653px, -44.8104px);"></div></div><div class="eyeball eyeball--0" style="width: 24.2884px; height: 24.2884px; transform: translate(313.325px, 26034.7px);"><div style="transform: translate(-0.0760608px, -6.07163px);"></div></div><div class="eyeball eyeball--3" style="width: 199.246px; height: 199.246px; transform: translate(596.13px, 26269.4px);"><div style="transform: translate(-1.3205px, -49.7939px);"></div></div><div class="eyeball eyeball--3" style="width: 47.3218px; height: 47.3218px; transform: translate(122.482px, 25972.8px);"><div style="transform: translate(-0.0662708px, -11.8303px);"></div></div><div class="eyeball eyeball--3" style="width: 57.1902px; height: 57.1902px; transform: translate(785.396px, 25944px);"><div style="transform: translate(-0.450345px, -14.2905px);"></div></div><div class="eyeball eyeball--2" style="width: 90.1008px; height: 90.1008px; transform: translate(365.887px, 148.468px);"><div style="transform: translate(-22.5252px, 0.00447694px);"></div></div><div class="eyeball eyeball--0" style="width: 167.09px; height: 167.09px; transform: translate(142.666px, 25988.1px);"><div style="transform: translate(-0.362555px, -41.7709px);"></div></div><div class="eyeball eyeball--2" style="width: 77.2627px; height: 77.2627px; transform: translate(-8.17701px, -110.969px);"><div style="transform: translate(-2.08353px, 19.203px);"></div></div><div class="eyeball eyeball--2" style="width: 126.467px; height: 126.467px; transform: translate(489.622px, 25993px);"><div style="transform: translate(-0.673753px, -31.6097px);"></div></div><div class="eyeball eyeball--0" style="width: 72.8711px; height: 72.8711px; transform: translate(942.741px, 26191.8px);"><div style="transform: translate(-0.683578px, -18.2049px);"></div></div><div class="eyeball eyeball--3" style="width: 165.909px; height: 165.909px; transform: translate(868.341px, 25933.4px);"><div style="transform: translate(-1.52439px, -41.4491px);"></div></div><div class="eyeball eyeball--2" style="width: 146.221px; height: 146.221px; transform: translate(391.656px, -60.3447px);"><div style="transform: translate(-34.0519px, 13.2949px);"></div></div><div class="eyeball eyeball--0" style="width: 167.829px; height: 167.829px; transform: translate(448.812px, 70.6917px);"><div style="transform: translate(-41.8447px, 3.07211px);"></div></div><div class="eyeball eyeball--3" style="width: 200.551px; height: 200.551px; transform: translate(839.07px, -239.282px);"><div style="transform: translate(-47.2536px, 16.7602px);"></div></div><div class="eyeball eyeball--1" style="width: 29.1689px; height: 29.1689px; transform: translate(751.887px, 25963.6px);"><div style="transform: translate(-0.216221px, -7.28903px);"></div></div><div class="eyeball eyeball--4" style="width: 77.9354px; height: 77.9354px; transform: translate(582.795px, 26127.6px);"><div style="transform: translate(-0.465089px, -19.4783px);"></div></div><div class="eyeball eyeball--0" style="width: 180.533px; height: 180.533px; transform: translate(348.583px, 26289.7px);"><div style="transform: translate(-0.753512px, -45.1269px);"></div></div><div class="eyeball eyeball--2" style="width: 41.7512px; height: 41.7512px; transform: translate(997.47px, 60.6727px);"><div style="transform: translate(-10.375px, 1.14339px);"></div></div><div class="eyeball eyeball--2" style="width: 156.045px; height: 156.045px; transform: translate(732.451px, 26425.2px);"><div style="transform: translate(-1.19881px, -38.9928px);"></div></div><div class="eyeball eyeball--2" style="width: 183.02px; height: 183.02px; transform: translate(463.787px, 26460px);"><div style="transform: translate(-0.960957px, -45.7449px);"></div></div><div class="eyeball eyeball--0" style="width: 78.2128px; height: 78.2128px; transform: translate(288.419px, 160.173px);"><div style="transform: translate(-19.5502px, -0.340689px);"></div></div><div class="eyeball eyeball--0" style="width: 29.5429px; height: 29.5429px; transform: translate(754.149px, 26256.6px);"><div style="transform: translate(-0.217226px, -7.38253px);"></div></div><div class="eyeball eyeball--3" style="width: 99.1705px; height: 99.1705px; transform: translate(618.497px, 25991.3px);"><div style="transform: translate(-0.639076px, -24.7844px);"></div></div><div class="eyeball eyeball--2" style="width: 164.845px; height: 164.845px; transform: translate(596.256px, -5.98855px);"><div style="transform: translate(-40.6076px, 7.02702px);"></div></div><div class="eyeball eyeball--2" style="width: 115.28px; height: 115.28px; transform: translate(94.9962px, 123.459px);"><div style="transform: translate(-28.7217px, 2.37732px);"></div></div><div class="eyeball eyeball--3" style="width: 217.21px; height: 217.21px; transform: translate(-915.905px, 26242.1px);"><div style="transform: translate(1.67848px, -54.2766px);"></div></div><div class="eyeball eyeball--1" style="width: 212.809px; height: 212.809px; transform: translate(155.238px, -153.141px);"><div style="transform: translate(-39.0709px, 36.1101px);"></div></div><div class="eyeball eyeball--0" style="width: 140.635px; height: 140.635px; transform: translate(246.438px, 26558px);"><div style="transform: translate(-0.419135px, -35.1563px);"></div></div><div class="eyeball eyeball--2" style="width: 99.2923px; height: 99.2923px; transform: translate(645.499px, 26518.8px);"><div style="transform: translate(-0.652516px, -24.8145px);"></div></div></div>
+<script>var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var w = window.innerWidth;
+var h = window.innerHeight;
+var numCircles = 60;
+
+var ground = void 0;
+var wall1 = void 0;
+var wall2 = void 0;
+
+var content = document.querySelector('.eyeball-physics');
+
+// Matter.js module aliases
+var elements = [];
+var eyeballs = [];
+
+window.addEventListener('resize', function (e) {
+  w = window.innerWidth;
+  h = window.innerHeight;
+  engine.render.canvas.width = w;
+  engine.render.canvas.height = h;
+
+  Matter.Body.setPosition(wall2, Matter.Vector.create(w + 30, h * .5));
+  Matter.Body.setPosition(ground, Matter.Vector.create(w * .5, h + 30));
+
+});
+
+// create a Matter.js engine
+var engine = Matter.Engine.create(content, {
+  render: {
+    options: {
+      width: w,
+      height: h,
+      wireframes: false,
+      background: "#000000" } } });
+
+
+
+
+window.engine = engine;
+
+var mouseConstraint = Matter.MouseConstraint.create(engine, {
+  constraint: {
+    render: {
+      visible: false },
+
+    stiffness: 0.1 } });
+
+
+
+var spritesArea = document.querySelector('.eyeball-sprites');var
+
+Eyeball = function () {
+  function Eyeball() {_classCallCheck(this, Eyeball);
+    var x = Math.random() * w;
+    var y = Math.random() * -h;
+    var base = w / 30;
+    if (base < 5) base = 5;
+    if (base > 10) base = 10;
+    var multiplier = w / 10;
+    if (multiplier < 30) multiplier = 30;
+    if (multiplier > 100) multiplier = 100;
+
+    this.radius = base + Math.random() * multiplier;
+    this.body = Matter.Bodies.circle(x, y, this.radius,
+    { render: {
+        fillStyle: 'black' } });
+
+
+    this.element = document.createElement('div');
+    this.element.className = 'eyeball ' + 'eyeball--' + Math.floor(Math.random() * 5);
+    this.element.style.width = this.radius * 2 + 'px';
+    this.element.style.height = this.radius * 2 + 'px';
+    this.cornea = document.createElement('div');
+    this.element.appendChild(this.cornea);
+    spritesArea.appendChild(this.element);
+  }_createClass(Eyeball, [{ key: 'update', value: function update()
+
+    {
+      this.pos = { x: this.body.position.x, y: this.body.position.y };
+      this.element.style.transform = 'translate(' + (this.pos.x - this.radius - 8) + 'px, ' + (this.pos.y - this.radius - 8) + 'px)';
+    } }, { key: 'lookAt', value: function lookAt(
+
+    pos) {
+      var diff = { x: pos.x - this.pos.x, y: pos.y - this.pos.y };
+      var polar = [
+      Math.sqrt(
+      diff.x * diff.x + diff.y * diff.y),
+
+      Math.atan2(diff.y, diff.x)];
+
+      var dist = polar[0] < this.radius * .5 ? polar[0] : this.radius * .5;
+      this.cornea.style.transform = 'translate(' + Math.cos(polar[1]) * dist + 'px, ' + Math.sin(polar[1]) * dist + 'px)';
+
+      window.cornea = 'translate(' + Math.cos(polar[1]) * dist + 'px, ' + Math.sin(polar[1]) * dist + 'px)';
+      window.polar = polar;
+    } }]);return Eyeball;}();
+
+
+var mousepos = { x: 0, y: 0 };
+
+window.addEventListener('pointermove', function (e) {
+  mousepos = { x: e.clientX, y: e.clientY };
+});
+
+// create two boxes and a ground
+for (var i = 0; i < numCircles; i++)
+{
+  eyeballs.push(new Eyeball());
+}
+ground = Matter.Bodies.rectangle(w / 2, h + 30, 50000., 60, { isStatic: true });
+wall1 = Matter.Bodies.rectangle(-30, h / 2, 60, h * 2, { isStatic: true });
+wall2 = Matter.Bodies.rectangle(w + 30, h / 2, 60, h * 2, { isStatic: true });
+window.wall2 = wall2;
+elements.push(ground);
+elements.push(wall1);
+elements.push(wall2);
+
+// add all of the bodies to the world
+console.log(eyeballs.map(function (eyeball) {return eyeball.body;}).concat(elements));
+Matter.World.add(engine.world, eyeballs.map(function (eyeball) {return eyeball.body;}).concat(elements));
+Matter.World.add(engine.world, mouseConstraint);
+
+// run the engine
+Matter.Engine.run(engine);
+
+Matter.Events.on(engine, "afterUpdate", function () {
+  eyeballs.forEach(function (eye) {
+    eye.update();
+    eye.lookAt(mousepos);
+  });
+});</script></body></html>
