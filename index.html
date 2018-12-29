@@ -1,120 +1,15 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>可拖动div-jq22.com</title>
-<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<style>
-  * {
-	margin:0;
-	padding:0;
-	border:none
-}
-body,html {
-	height:100%;
-	width:100%;
-}
-.drag-box {
-	user-select:none;
-	background:#f0f0f0;
-	z-index:2147483647;
-	position:fixed;
-	left:0;
-	top:0;
-	width:200px;
-}
-#dragBoxBar {
-	align-items:center;
-	display:flex;
-	justify-content:space-between;
-	background:#ccc;
-	width:100%;
-	height:40px;
-	cursor:move;
-	user-select:none;
-}
-.no-select {
-	user-select:none;
-}
-.pointer-events {
-	pointer-events:none;
-}
-.no-border {
-	border:none;
-}
-#injectedBox {
-	height:160px;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	font-size:2rem;
-	background:#eee;
-}
-</style>
-</head>
-<body>
-<dragbox id="dragBox" class="drag-box">
-    <dragboxbar id="dragBoxBar" class="no-select"></dragboxbar>
-    <injectedbox id="injectedBox">CONTENT</injectedbox>
-</dragbox>
-
-<script>
-var isMouseDown,
-    initX,
-    initY,
-    height = injectedBox.offsetHeight,
-    width = injectedBox.offsetWidth,
-    dragBoxBar = document.getElementById('dragBoxBar');
-
-
-dragBoxBar.addEventListener('mousedown', function(e) {
-    isMouseDown = true;
-    document.body.classList.add('no-select');
-    injectedBox.classList.add('pointer-events');
-    initX = e.offsetX;
-    initY = e.offsetY;
-    dragBox.style.opacity = 0.5;
-})
-
-dragBoxBar.addEventListener('mouseup', function(e) {
-    mouseupHandler();
-})
-
-document.addEventListener('mousemove', function(e) {
-    if (isMouseDown) {
-        var cx = e.clientX - initX,
-            cy = e.clientY - initY;
-        if (cx < 0) {
-            cx = 0;
-        }
-        if (cy < 0) {
-            cy = 0;
-        }
-        if (window.innerWidth - e.clientX + initX < width + 16) {
-            cx = window.innerWidth - width;
-        }
-        if (e.clientY > window.innerHeight - height - dragBoxBar.offsetHeight + initY) {
-            cy = window.innerHeight - dragBoxBar.offsetHeight - height;
-        }
-        dragBox.style.left = cx + 'px';
-        dragBox.style.top = cy + 'px';
-    }
-})
-
-
-document.addEventListener('mouseup', function(e) {
-    if (e.clientY > window.innerWidth || e.clientY < 0 || e.clientX < 0 || e.clientX > window.innerHeight) {
-        mouseupHandler();
-    }
-});
-
-function mouseupHandler() {
-    isMouseDown = false;
-    document.body.classList.remove('no-select');
-    injectedBox.classList.remove('pointer-events');
-    dragBox.style.opacity = 1;
-}
-</script>
-
-</body>
+	<head>
+		<title>真他妈的头痛</title>
+		<style>
+		h1{
+			color:red;	
+		}
+	</style>
+	</head>
+	<body>
+		<h1>第一个html程序</h1>
+		不，这不是第一个，只是你个狗日的把之前的东西忘了。
+		
+	</body>	
 </html>
